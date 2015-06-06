@@ -17,7 +17,7 @@
                 <!-- http://stackoverflow.com/questions/3294572/is-input-well-formed-without-a-form -->
                 <input class="user-block-search" type="text" placeholder="Поиск:">
                 <span class="bookmarks">Закладки: 0</span>
-                <span class="cart">Корзина: 0</span>
+                <span class="cart cart-empty">Корзина: 0</span>
                 <a class="checkout" href="">Оформить заказ</a>
             </div>
 
@@ -101,14 +101,27 @@
                 <div class="hero-item-icon icon-tractor"></div>
             </div>
 
-            <div class="hero slider">
-                <img class="hero-image" src="http://placehold.it/620x266" alt="">
-                <div class="hero-slider-title">
-                    Дрели
+            <div class="hero-slider">
+                <div class="hero-slider-slide1">
+                    <img class="hero-image" src="http://placehold.it/620x266" alt="">
+                    <div class="hero-slider-title">
+                        Перфораторы
+                    </div>
+                    <div class="hero-slider-motto">
+                        Настоящие мужские игрушки
+                    </div>
                 </div>
-                <div class="hero-slider-motto">
-                    Соседям на радость!
+
+                <div class="hero-slider-slide2">
+                    <img class="hero-image" src="http://placehold.it/620x266" alt="">
+                    <div class="hero-slider-title">
+                        Дрели
+                    </div>
+                    <div class="hero-slider-motto">
+                        Соседям на радость!
+                    </div>
                 </div>
+
                 <div class="hero-slide-left"></div>
                 <div class="hero-slide-right"></div>
                 <div class="hero-button">
@@ -227,49 +240,49 @@
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=BOSCH" width="220" height="145" alt="BOSCH">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=BOSCH" width="220" height="145" alt="BOSCH">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=Makita" width="220" height="145" alt="Makita">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=Makita" width="220" height="145" alt="Makita">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=DeWALT" width="220" height="145" alt="DeWALT">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=DeWALT" width="220" height="145" alt="DeWALT">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=Interscol" width="220" height="145" alt="Интерскол">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=Interscol" width="220" height="145" alt="Интерскол">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=HITACHI" width="220" height="145" alt="HITACHI">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=HITACHI" width="220" height="145" alt="HITACHI">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=LG" width="220" height="145" alt="LG">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=LG" width="220" height="145" alt="LG">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=AEG" width="220" height="145" alt="AEG">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=AEG" width="220" height="145" alt="AEG">
                 </a>
             </div>
 
             <div class="manufacturer-item">
                 <a href="">
-                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&text=metabo" width="220" height="145" alt="metabo">
+                    <img class="manufacturer-item-image" src="http://placehold.it/220x145&amp;text=metabo" width="220" height="145" alt="metabo">
                 </a>
             </div>
         </section>
@@ -277,61 +290,111 @@
 
     <section class="services">
         <div class="container">
-            <h2>Сервисы</h2> Хороший интернет-магазин отличается от плохого не только ценами!
-            <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            <h2>Сервисы</h2>
+            <p>
+                Хороший интернет-магазин отличается от плохого не только ценами!
+                <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
+
+            <!-- Тут будет переключатель слайдов. Изначально я думал, что будет реализовано на js. Но теперь вижу, что можно через input[type="radio"]:checked + display:none. По ходу формирования css переделаю или оставлю так и напишу скрипт -->
             <ul>
                 <li>
-                    <a href="">Доставка</a>
+                    <a class="services-option-delivery" href="">Доставка</a>
                 </li>
                 <li>
-                    <a href="">Гарантия</a>
+                    <a class="services-option-warranty" href="">Гарантия</a>
                 </li>
                 <li>
-                    <a href="">Кредит</a>
+                    <a class="services-option-loan" href="">Кредит</a>
                 </li>
             </ul>
 
-            <h3>
-                Доставка 
-            </h3>
-            <p>
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-            </p>
+            <!-- Собственно слайды. Картинки на слайдах реализуются фоном, чтобы не заморачиваться с обтеканиями, которые поддерживаются не всеми браузерами -->
+            <div class="services-slide-delivery">
+                <h3>
+                    Доставка 
+                </h3>
+                <p>
+                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                </p>
+            </div>
+
+            <div class="services-slide-warranty">
+                <h3>Гарантия</h3>
+                <p>
+                    Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                </p>
+            </div>
+
+            <div class="services-slide-loan">
+                <h3>Кредит</h3>
+                <p>
+                    Залезть в долговую яму стало проще!
+                    <br> Кредитные консультанты придут вам на помощь.
+                </p>
+                <a class="btn" href="">Отправить заявку</a>
+            </div>
         </div>
     </section>
 
     <section class="about">
         <div class="container">
-            <h2>
-                КОМПАНИЯ «Техномарт»
-            </h2>
-            <p>
-                Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-            </p>
-            <p>
-                Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
-            </p>
-            <ul>
-                <li>
-                    Деловые линии
-                </li>
-                <li>
-                    Автотрейдинг
-                </li>
-                <li>
-                    ЖелДорЭкспедиция
-                </li>
-            </ul>
-            <a class="btn" href="">Подробнее о компании</a>
+            <div class="about-company">
+                <h2>
+                    КОМПАНИЯ «Техномарт»
+                </h2>
+                <p>
+                    Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+                </p>
+                <p>
+                    Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
+                </p>
+                <ul>
+                    <li>
+                        Деловые линии
+                    </li>
+                    <li>
+                        Автотрейдинг
+                    </li>
+                    <li>
+                        ЖелДорЭкспедиция
+                    </li>
+                </ul>
+                <a class="btn" href="">Подробнее о компании</a>
+            </div>
 
-            <h2>
-                Контакты
-            </h2>
-            <p>
-                Вы можете забрать товар сами, заехав к нам в офис:
-            </p>
-            <img src="http://placehold.it/300x158&text=MAP" width="300" height="158" alt="">
-            <a class="btn" href="">Заблудились? Напишите нам!</a>
+            <div class="about-contacts">
+                <h2>
+                    Контакты
+                </h2>
+                <p>
+                    Вы можете забрать товар сами, заехав к нам в офис:
+                </p>
+                <img src="http://placehold.it/300x158&amp;text=MAP" width="300" height="158" alt="">
+                <br><a class="btn" href="">Заблудились? Напишите нам!</a>
+            </div>
+
+            <div class="about-big-map">
+                <img src="http://placehold.it/940x447&amp;text=BIG-MAP" width="940" height="447" alt="">
+                <button class="about-big-map-close">Х</button>
+            </div>
+
+            <div class="about-contact-form popup-window">
+                <form action="/echo" method="post">
+                    <label>Ваше имя:
+                        <input class="contact-form-name" type="text" name="name" placeholder="Представтесь, пожалуйста">
+                    </label>
+                    <label>Ваш e-mail:
+                        <input class="contact-form-email" type="email" name="email" placeholder="Для отправки ответа">
+                    </label>
+                    <label>
+                        Текст письма:
+                        <textarea class="contact-form-text" placeholder="В свободной форме"></textarea>
+                    </label>
+                    <button class="btn" type="submit">Отправить</button>
+                    <button class="cancel-btn">Отмена</button>
+                </form>
+            </div>
         </div>
     </section>
 
