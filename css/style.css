@@ -438,9 +438,9 @@ body {
 
 .hero-item-title {
     /* Box-model */
-    margin-top: 26px;
+    margin-top: 21px;
     margin-left: 23px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     
     /* Typography */
     color: #fff;
@@ -457,7 +457,7 @@ body {
     /* Box-model */
     display: inline-block;
     vertical-align: top;
-    margin-left: 23px;
+    margin-left: 24px;
     width: 135px;
     
     /* Typography */
@@ -499,6 +499,11 @@ body {
 }
 
 .hero-item-btn:hover::before { opacity: .2; }
+
+.ribbon {
+    /* Positioning */
+    position: absolute;
+}
 
 .hero-slider { 
     /* Box-model */
@@ -563,7 +568,7 @@ body {
     margin-right: 20px;
     
     /* Visual */
-    box-shadow: 0 0 0 1px #e5e5e5; 
+    box-shadow: inset 0 0 0 1px #e5e5e5; 
 }
 
 .shop-item:hover {
@@ -573,6 +578,87 @@ body {
 
 .popular-products .shop-item:last-child {
     margin-right: 0;
+}
+
+.shop-item-image {
+    /* Box-model */
+    margin: 1px 1px;
+    width: 218px;
+    height: 164px;
+    margin-bottom: 12px;
+}
+
+.shop-item-title {
+    /* Box-model */
+    margin: 0 30px;
+    margin-bottom: 12px;
+
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+}
+
+.shop-item-original-price {
+    /* Box-model */
+    min-height: 18px;
+    margin-bottom: 8px;
+    
+    /* Typography */
+    color: #999;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+.shop-item-current-price {
+    position: relative;
+    
+    /* Box-model */
+    padding: 10px;
+    margin: 0 43px;
+    
+    /* Typography */
+    color: #fff;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    
+    /* Visual */
+    background-color: #ee3643;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.shop-item-current-price::after {
+    content: "";
+    
+    /* Positioning */
+    position: absolute;
+    right: -25px;
+    top: 0;
+    
+    /* Box-model */
+    box-sizing: border-box;
+    display: block;
+    height: 38px;
+    width: 38px;
+    border: 19px solid #fff;
+    border-left: 19px solid #ee3643;
+    
+    /* Visual */
+    background-color: #fff;
+}
+
+.shop-item-buttons {
+    /* Box-model */
+    display: none;
 }
 
 .popular-products {
@@ -597,6 +683,10 @@ body {
     margin-right: 0;
 }
 
+.popular-manufacturers {
+    /* Box-model */
+    margin-bottom: 65px;
+}
 
 .services {
     /* Visual */
@@ -604,6 +694,9 @@ body {
 }
 
 .services-title {
+    /* Box-model */
+    padding-top: 65px;
+    
     /* Typography */
     font-size: 30px;
     font-family: "Cuprum", Arial, sans-serif;
@@ -611,4 +704,11 @@ body {
     line-height: 1;
     color: #000;
     text-transform: uppercase;
+}
+
+.services p {
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
 }
