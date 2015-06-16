@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Техномарт</title>
 </head>
@@ -10,34 +11,47 @@
 <body>
     <!-- Шапка нашего сайта -->
     <header class="main-header">
-        <div class="container clearfix">
-            <div class="user-block">
+        <div class="user-block">
+            <div class="container clearfix">
                 <div class="user-block-logo">
-                    Техномарт
+                    <a href="#">Техномарт</a>
                 </div>
                 <!-- http://stackoverflow.com/questions/3294572/is-input-well-formed-without-a-form -->
                 <input class="user-block-search" type="text" placeholder="Поиск:">
-                <span class="bookmarks">Закладки: 0</span>
-                <span class="cart cart-empty">Корзина: 0</span>
-                <a class="checkout" href="">Оформить заказ</a>
+                <div class="user-block-bookmarks">
+                    <a class="" href="">Закладки: 0</a>
+                </div>
+                <div class="user-block-cart cart-empty">
+                    <a class="" href="">Корзина: 0</a>
+                </div>
+                <div class="user-block-checkout">
+                    <a class="" href="">Оформить заказ</a>
+                </div>
             </div>
+        </div>
 
-            <div class="info-block">
+
+        <div class="info-block">
+            <div class="container clearfix">
                 <div class="info-block-motto">
-                    Интернет-магазин строительных материалов и инструментов для ремонта
+                    Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
                 </div>
-                <div class="info-block-phone">
-                    +7 (812) 555-05-55
-                </div>
-                <div class="info-block-adress">
-                    г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/18
+                <div class="info-block-contacts">
+                    <div class="info-block-phone">
+                        +7 (812) 555-05-55
+                    </div>
+                    <div class="info-block-address">
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/18
+                    </div>
                 </div>
                 <div class="info-block-auth">
                     <a class="login" href="">Войти</a>
                     <a class="register" href="">Регистрация</a>
                 </div>
             </div>
+        </div>
 
+        <div class="container clearfix">
             <nav class="main-nav">
                 <ul>
                     <li>
@@ -46,7 +60,7 @@
                     <li>
                         <a href="">Компания</a>
                     </li>
-                    <li>
+                    <li>v
                         <a href="">Каталог</a>
                     </li>
                     <li>
@@ -66,15 +80,16 @@
         </div>
     </header>
 
-    <div class="container clearfix">
-        <!-- Так называемая Hero-area (зона для промоакций и прочих интересностей) -->
-        <section class="hero-area">
+
+    <!-- Так называемая Hero-area (зона для промоакций и прочих интересностей) -->
+    <section class="hero-area">
+        <div class="container clearfix">
             <div class="hero-item bg-orange">
                 <div class="hero-item-title">
                     Материалы
                 </div>
                 <div class="hero-item-motto">
-                    <a href="" class="hero-item-btn">На любой вкус</a>
+                    <a class="hero-item-btn" href="">На любой вкус</a>
                 </div>
                 <div class="hero-item-icon icon-paint-bucket"></div>
                 <div class="ribbon">
@@ -87,7 +102,7 @@
                     Инструмент
                 </div>
                 <div class="hero-item-motto">
-                    <a href="" class="hero-item-btn">На все случаи</a>
+                    <a class="hero-item-btn" href="">На все случаи</a>
                 </div>
                 <div class="hero-item-icon icon-drill"></div>
             </div>
@@ -97,7 +112,7 @@
                     Техника
                 </div>
                 <div class="hero-item-motto">
-                    <a href="" class="hero-item-btn">Для стройки</a>
+                    <a class="hero-item-btn" href="">Для стройки</a>
                 </div>
                 <div class="hero-item-icon icon-tractor"></div>
             </div>
@@ -135,7 +150,7 @@
                     Скидки 50%
                 </div>
                 <div class="hero-item-motto">
-                    <a href="" class="hero-item-btn">На 350 товаров</a>
+                    <a class="hero-item-btn" href="">На 350 товаров</a>
                 </div>
                 <div class="hero-item-icon icon-cart"></div>
             </div>
@@ -145,15 +160,17 @@
                     Доставка
                 </div>
                 <div class="hero-item-motto">
-                    <a href="" class="hero-item-btn">Бесплатно</a>
+                    <a class="hero-item-btn" href="">Бесплатно</a>
                 </div>
                 <div class="hero-item-icon icon-delivery"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Раздел популярных товаров -->
-        <section class="popular-products">
-            <header class="section-header">
+    <!-- Раздел популярных товаров -->
+    <section class="popular-products">
+        <div class="container clearfix">
+            <header class="section-header clearfix">
                 <h2 class="section-header-title">Популярные товары:</h2>
                 <div class="section-header-button">
                     <a class="btn" href="">Все популярные товары</a>
@@ -228,11 +245,13 @@
                     <a class="shop-item-bookmark-btn" href="">В закладки</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Раздел популярных производителей -->
-        <section class="popular-manufacturers">
-            <header class="section-header">
+    <!-- Раздел популярных производителей -->
+    <section class="popular-manufacturers">
+        <div class="container clearfix">
+            <header class="section-header clearfix">
                 <h2 class="section-header-title">Популярные производители:</h2>
                 <div class="section-header-button">
                     <a class="btn" href="">Все производители</a>
@@ -286,8 +305,9 @@
                     <img class="manufacturer-item-image" src="img/brands/metabo.jpg" width="220" height="145" alt="metabo">
                 </a>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
 
     <section class="services">
         <div class="container">
