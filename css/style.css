@@ -412,9 +412,15 @@ body {
     background-color: #293449;
 }
 
+.main-nav a:active {
+    /* Visual */
+    opacity: .5;
+    background-color: #101620;
+}
+
 .hero-area {
     /* Box-model */
-    padding-bottom: 53px;
+    padding-bottom: 34px;
 }
 
 .hero-item {
@@ -502,6 +508,7 @@ body {
 }
 
 .hero-item-btn:hover::before { opacity: .2; }
+.hero-item-btn:active::before { opacity: .3; }
 
 .ribbon {
     /* Positioning */
@@ -509,8 +516,64 @@ body {
 }
 
 .hero-slider { 
+    /* Positioning */
+    position: relative;
+    
     /* Box-model */
     float: left;
+}
+
+.hero-slider-slide {
+    /* Box-model */
+    height: 266px;
+    width: 620px;
+}
+
+.hero-slider-title {
+    /* Box-model */
+    padding: 23px;
+    padding-bottom: 4px;
+    /* Typography */
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-slider-motto {
+    /* Box-model */
+    padding-left: 25px;
+    
+    /* Typography */
+    color: #fff;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.hero-slider-slide1 {
+    /* Visual */
+    background-image: url("../img/hero/slide1.jpg");
+}
+
+.hero-slider-slide2 {
+    /* Box-model */
+    display:none;
+    
+    /* Visual */
+    background-image: url("../img/hero/slide2.jpg");
+}
+
+.hero-button {
+    /* Positioning */
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+}
+
+.hero-button .btn {
+    /* Box-model */
+    width: 135px;
 }
 
 .section-header {
@@ -545,6 +608,11 @@ body {
     float: right;
 }
 
+.section-header-button .btn {
+    /* Box-model */
+    width: 193px;
+}
+
 .btn {
     /* Box-model */
     display: inline-block;
@@ -555,6 +623,7 @@ body {
     color: #fff;
     font-size: 14px;
     line-height: 18px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     
@@ -563,7 +632,12 @@ body {
     border-radius: 3px;
 }
 
+.btn:hover { background-color: #ca2c37; }
+.btn:active { background-color: #ba2732; }
+
 .shop-item {
+    position: relative;
+    
     /* Box-model */
     float: left;
     height: 318px;
@@ -578,6 +652,85 @@ body {
 .shop-item:hover {
     /* Visual */
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73 , .5);
+}
+
+.shop-item:hover .shop-item-buttons {
+    /* Positioning */
+    position: absolute;
+    top:0;
+    left: 0;
+    
+    /* Box-model */
+    display: block;
+    width: 218px;
+    height: 164px;
+    
+    /* Visual */
+    background-color: #fff;
+}
+
+.shop-item-buy-btn {
+    /* Box-model */
+    border-bottom: 3px solid #377416;
+    display: block;
+    padding-top: 13px;
+    padding-bottom: 8px;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 8px;
+    width: 135px;
+    
+    /* Typography */
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    /* Visual */
+    background-color: #63a63e;
+    border-radius: 3px;
+}
+
+.shop-item-buy-btn:hover {
+    /* Visual */
+    background-color: #5fbb2d;
+}
+
+.shop-item-buy-btn:active {
+    /* Visual */
+    background-color: #518534;
+    border-bottom-color: #518534;
+}
+
+.shop-item-bookmark-btn {
+    /* Box-model */
+    border: 3px solid #63a63e;
+    display: block;
+    padding: 9px 0;
+    margin: 0 auto;
+    width: 129px;
+    
+    /* Typography */
+    color: #32425c;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    /* Visual */
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.shop-item-bookmark-btn:hover {
+    /* Visual */
+    border-color: #32425c;
+}
+
+.shop-item-bookmark-btn:active {
+    /* Visual */
+    opacity: .3;
 }
 
 .popular-products .shop-item:last-child {
@@ -687,6 +840,11 @@ body {
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73 , .5);
 }
 
+.manufacturer-item:active .manufacturer-item-image {
+    /* Visual */
+    opacity: .3;
+}
+
 
 .popular-manufacturers .manufacturer-item:nth-child( 4n + 1 ) {
     /* Box-model */
@@ -749,6 +907,11 @@ body {
     /* Visual */
     background-color: #32425c;
     cursor: pointer;
+}
+
+.services label:hover {
+    /* Visual */
+    background-color: #293449;
 }
 
 .services label:last-of-type {
