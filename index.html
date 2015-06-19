@@ -84,37 +84,33 @@
     <!-- Так называемая Hero-area (зона для промоакций и прочих интересностей) -->
     <section class="hero-area">
         <div class="container clearfix">
-            <div class="hero-item bg-orange">
+            <div class="hero-item bg-orange hero-icon-paint-bucket">
+                <div class="ribbon-new"></div>
                 <div class="hero-item-title">
                     Материалы
                 </div>
                 <div class="hero-item-motto">
                     <a class="hero-item-btn" href="">На любой вкус</a>
                 </div>
-                <div class="hero-item-icon icon-paint-bucket"></div>
-                <div class="ribbon">
-                    news
-                </div>
+
             </div>
 
-            <div class="hero-item bg-blue">
+            <div class="hero-item bg-blue hero-icon-drill">
                 <div class="hero-item-title">
                     Инструмент
                 </div>
                 <div class="hero-item-motto">
                     <a class="hero-item-btn" href="">На все случаи</a>
                 </div>
-                <div class="hero-item-icon icon-drill"></div>
             </div>
 
-            <div class="hero-item bg-pink">
+            <div class="hero-item bg-pink hero-icon-tractor">
                 <div class="hero-item-title">
                     Техника
                 </div>
                 <div class="hero-item-motto">
                     <a class="hero-item-btn" href="">Для стройки</a>
                 </div>
-                <div class="hero-item-icon icon-tractor"></div>
             </div>
 
             <div class="hero-slider">
@@ -145,24 +141,22 @@
                 </div>
             </div>
 
-            <div class="hero-item bg-green">
+            <div class="hero-item bg-green hero-icon-cart">
                 <div class="hero-item-title">
                     Скидки 50%
                 </div>
                 <div class="hero-item-motto">
                     <a class="hero-item-btn" href="">На 350 товаров</a>
                 </div>
-                <div class="hero-item-icon icon-cart"></div>
             </div>
 
-            <div class="hero-item bg-orange">
+            <div class="hero-item bg-orange hero-icon-delivery">
                 <div class="hero-item-title">
                     Доставка
                 </div>
                 <div class="hero-item-motto">
                     <a class="hero-item-btn" href="">Бесплатно</a>
                 </div>
-                <div class="hero-item-icon icon-delivery"></div>
             </div>
         </div>
     </section>
@@ -229,6 +223,7 @@
             </div>
 
             <div class="shop-item">
+                <div class="ribbon-new"></div>
                 <img class="shop-item-image" src="img/shop/bosch-bfg-2000.jpg" alt="" width="218" height="164">
                 <div class="shop-item-title">
                     Перфоратор BOSCH BFG 2000
@@ -236,9 +231,6 @@
                 <div class="shop-item-original-price"></div>
                 <div class="shop-item-current-price">
                     25 500 Р.
-                </div>
-                <div class="ribbon">
-                    new
                 </div>
                 <div class="shop-item-buttons">
                     <a class="shop-item-buy-btn" href="">Купить</a>
@@ -317,7 +309,7 @@
                 <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
 
-            <form action="/echo">
+            <div class="services-slider">
                 <!-- Переключатели слайдов -->
                 <input class="services-option" id="services-option-delivery" type="radio" name="services-option" checked>
                 <label for="services-option-delivery">Доставка</label>
@@ -328,42 +320,44 @@
 
 
                 <!-- Собственно слайды. Картинки на слайдах реализуются фоном, чтобы не заморачиваться с обтеканиями, которые поддерживаются не всеми браузерами -->
-                <div class="services-slide services-slide-delivery">
-                    <h3>
-                        Доставка 
-                    </h3>
-                    <p>
-                        Мы с удовольствием доставим ваш товар прямо
-                        <br>к вашему подъезду совершенно бесплатно!
-                        <br>Ведь мы неплохо заработаем,
-                        <br>поднимая его на ваш этаж!
-                    </p>
+                <div class="services-slides clearfix">
+                    <div class="services-slide services-slide-delivery">
+                        <h3>
+                            Доставка 
+                        </h3>
+                        <p>
+                            Мы с удовольствием доставим ваш товар прямо
+                            <br>к вашему подъезду совершенно бесплатно!
+                            <br>Ведь мы неплохо заработаем,
+                            <br>поднимая его на ваш этаж!
+                        </p>
+                    </div>
+                    
+                    <div class="services-slide services-slide-warranty">
+                        <h3>
+                            Гарантия
+                        </h3>
+                        <p>
+                            Если купленный у нас товар поломается или заискрит,
+                            <br>а также в случае пожара, спровоцированного его возгаранием,
+                            <br>вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                            <br>сгоревший товар на новый.
+                            <br>Дом уж восстановите как-нибудь сами.
+                        </p>
+                    </div>
+                    
+                    <div class="services-slide services-slide-loan">
+                        <h3>
+                            Кредит
+                        </h3>
+                        <p>
+                            Залезть в долговую яму стало проще!
+                            <br> Кредитные консультанты придут вам на помощь.
+                        </p>
+                        <a class="btn" href="">Отправить заявку</a>
+                    </div>
                 </div>
-
-                <div class="services-slide services-slide-warranty">
-                    <h3>
-                        Гарантия
-                    </h3>
-                    <p>
-                        Если купленный у нас товар поломается или заискрит,
-                        <br>а также в случае пожара, спровоцированного его возгаранием,
-                        <br>вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                        <br>сгоревший товар на новый.
-                        <br>Дом уж восстановите как-нибудь сами.
-                    </p>
-                </div>
-
-                <div class="services-slide services-slide-loan">
-                    <h3>
-                        Кредит
-                    </h3>
-                    <p>
-                        Залезть в долговую яму стало проще!
-                        <br> Кредитные консультанты придут вам на помощь.
-                    </p>
-                    <a class="btn" href="">Отправить заявку</a>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -371,13 +365,14 @@
         <div class="container clearfix">
             <div class="about-company">
                 <h2>
-                    КОМПАНИЯ «Техномарт»
+                    Компания «Техномарт»
                 </h2>
                 <p>
                     Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
                 </p>
                 <p>
-                    Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
+                    Мы можем доставить ваш товар в самые отдаленные точки России!
+                    <br>Техномарт работает со многими транспортными компаниями:
                 </p>
                 <ul>
                     <li>

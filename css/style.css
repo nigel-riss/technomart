@@ -424,6 +424,9 @@ body {
 }
 
 .hero-item {
+    /* Positioning */
+    position: relative;
+    
     /* Box-model */
     float: left;
     height: 123px;
@@ -441,6 +444,18 @@ body {
 .bg-pink { background-color: #cc79d1; }
 
 .bg-green { background-color: #85d179; }
+
+[class*="hero-icon-"] {
+    /* Visual */
+    background-image: url(../img/hero/sprite.png);
+    background-repeat: no-repeat;
+}
+
+.hero-icon-paint-bucket { background-position: 162px -447px;}
+.hero-icon-drill { background-position: 162px -301px; }
+.hero-icon-tractor { background-position: 157px -595px; }
+.hero-icon-cart { background-position: 153px -11px; }
+.hero-icon-delivery { background-position: 157px -155px; }
 
 .hero-item-title {
     /* Box-model */
@@ -474,9 +489,14 @@ body {
 }
 
 .hero-item-btn {
+    /* Positioning */
+    position: relative;
+    
     /* Box-model */
     display: block;
     padding: 10px 0;
+    padding-top: 11px;
+    padding-bottom: 9px;
     
     /* Typography */
     color: #fff;
@@ -484,14 +504,18 @@ body {
     line-height: 18px;
     text-decoration: none;
     text-transform: uppercase;
+    
+    /* Visual */
+    z-index: 10;
 }
 
-.hero-item-btn::before {
+.hero-item-motto::before {
     content: "";
     
     /* Positioning */
     position: absolute;
     top:0;
+    left: 0;
     
     /* Box-model */
     display: block;
@@ -504,15 +528,29 @@ body {
     /* Visual */
     background-color: #000;
     border-radius: 3px;
-    opacity: .1; 
+    opacity: .1;
+    z-index: 1;
+    
 }
 
-.hero-item-btn:hover::before { opacity: .2; }
-.hero-item-btn:active::before { opacity: .3; }
+.hero-item-motto:hover::before { opacity: .2; }
+.hero-item-motto:active::before { opacity: .3; }
 
-.ribbon {
+.ribbon-new {
     /* Positioning */
     position: absolute;
+    top: 0;
+    right: 0;
+    
+    /* Box-model */
+    height: 59px;
+    width: 60px;
+    
+    /* Visual */
+    background-image: url(../img/hero/sprite.png);
+    background-repeat: no-repeat; 
+    background-position: -25px -755px;
+    z-index: 2;
 }
 
 .hero-slider { 
@@ -654,20 +692,23 @@ body {
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73 , .5);
 }
 
-.shop-item:hover .shop-item-buttons {
+.shop-item-buttons {
     /* Positioning */
     position: absolute;
-    top:0;
-    left: 0;
+    top:1px;
+    left: 1px;
     
     /* Box-model */
-    display: block;
+    display: none;
     width: 218px;
     height: 164px;
     
     /* Visual */
     background-color: #fff;
+    z-index: 1;
 }
+
+.shop-item:hover .shop-item-buttons { display: block; }
 
 .shop-item-buy-btn {
     /* Box-model */
@@ -813,11 +854,6 @@ body {
     background-color: #fff;
 }
 
-.shop-item-buttons {
-    /* Box-model */
-    display: none;
-}
-
 .popular-products {
     /* Box-model */
     margin-bottom: 20px;
@@ -857,14 +893,24 @@ body {
 }
 
 .services {
+    /* Box-model */
+    padding-top: 65px;
+    
     /* Visual */
     background-color: #f2f6f8;
     background-colodfr: red;
 }
 
+.services .container {
+    /* Box-model */
+    padding-right: 0;
+    width: 950px;
+}
+
 .services-title {
     /* Box-model */
-    padding-top: 65px;
+    padding: 0;
+    margin: 0;
     margin-bottom: 26px;
     
     /* Typography */
@@ -884,6 +930,11 @@ body {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
+}
+
+.services-slider {
+    /* Box-model */
+    height: 283px;
 }
 
 .services label {
@@ -923,16 +974,41 @@ body {
     /* Box-model */
     display: none;
 }
+ 
+.services-slides {
+    /* Box-model */
+    float: right;
+    height: 283px;
+    margin-top: -284px;
+    width: 630px;
+}
 
 .services-slide {
     /* Box-model */
-    float: right;
     display: none;
-    margin-top: -284px;
-    width: 620px;
+    height: 100%;
+    
+    /* Visual */
+    background-image: url("../img/services/sprite.png");
+    background-repeat: no-repeat;
 }
 
-#services-option-delivery:checked ~ .services-slide-delivery {
+.services-slide-delivery {
+    /* Visual */
+    background-position: 51px -75px;
+}
+
+.services-slide-warranty {
+    /* Visual */
+    background-position: 139px -1043px;
+}
+
+.services-slide-loan {
+    /* Visual */
+    background-position: 63px -559px;
+}
+
+#services-option-delivery:checked ~ .services-slides .services-slide-delivery {
     /* Box-model */
     display: block;
 }
@@ -949,7 +1025,7 @@ body {
     background: #fff;
 }
 
-#services-option-warranty:checked ~ .services-slide-warranty {
+#services-option-warranty:checked ~ .services-slides .services-slide-warranty {
     /* Box-model */
     display: block;
 }
@@ -966,7 +1042,7 @@ body {
     background: #fff;
 }
 
-#services-option-loan:checked ~ .services-slide-loan {
+#services-option-loan:checked ~ .services-slides .services-slide-loan {
     /* Box-model */
     display: block;
 }
@@ -1001,6 +1077,12 @@ body {
     margin-bottom: 30px;
 }
 
+.about {
+    /* Box-model */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .about-company {
     /* Box-model */
     float: left;
@@ -1011,6 +1093,66 @@ body {
     /* Box-model */
     float: right;
     width: 300px;
+}
+
+.about h2 {
+    /* Box-model */
+    margin: 0;
+    margin-bottom: 40px;
+    
+    /* Typography */
+    color: #000;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.about p {
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.about ul {
+    /* Box-model */
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    
+    /* Visual */
+    list-style: none;
+}
+
+.about li {
+    /* Positioning */
+    position: relative;
+    
+    /* Box-model */
+    padding: 10px 0;
+    padding-left: 36px;
+    
+    /* Typography */
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.about li:before {
+    content: "";
+    
+    /* Positioning */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    
+    /* Box-model */
+    display: inline-block;
+    height: 2px;
+    width: 25px;
+    
+    /* Visual */
+    background-color: #fb565a;
 }
 
 .main-footer {
