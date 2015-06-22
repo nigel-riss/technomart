@@ -17,15 +17,18 @@
                     <a href="#">Техномарт</a>
                 </div>
                 <!-- http://stackoverflow.com/questions/3294572/is-input-well-formed-without-a-form -->
-                <input class="user-block-search" type="text" placeholder="Поиск:">
-                <div class="user-block-bookmarks">
-                    <a class="" href="">Закладки: 0</a>
+                <div class="user-block-search">
+                    <div class="user-block-search-icon icon-search"></div>
+                    <input class="user-block-search-input" type="text" placeholder="Поиск:">
                 </div>
-                <div class="user-block-cart cart-empty">
-                    <a class="" href="">Корзина: 0</a>
+                <div class="user-block-bookmarks">
+                    <a class="" hre="#"><i class="icon-bookmark"></i>Закладки: 0</a>
+                </div>
+                <div class="user-block-cart">
+                    <a class="" hre="#"><i class="icon-basket"></i>Корзина: 0</a>
                 </div>
                 <div class="user-block-checkout">
-                    <a class="" href="">Оформить заказ</a>
+                    <a class="" hre="#">Оформить заказ</a>
                 </div>
             </div>
         </div>
@@ -38,15 +41,20 @@
                 </div>
                 <div class="info-block-contacts">
                     <div class="info-block-phone">
-                        +7 (812) 555-05-55
+                        <i class="icon-phone"></i>+7 (812) 555-05-55
                     </div>
                     <div class="info-block-address">
-                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/18
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                     </div>
                 </div>
                 <div class="info-block-auth">
-                    <a class="login" href="">Войти</a>
-                    <a class="register" href="">Регистрация</a>
+                    <div class="info-block-btn">
+                        <i class="icon-login"></i>
+                        <a class="login" hre="#">Войти</a>
+                    </div>
+                    <div class="info-block-btn">
+                        <a class="register" hre="#">Регистрация</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,31 +63,30 @@
             <nav class="main-nav">
                 <ul>
                     <li>
-                        <a href="">Главная</a>
+                        <a hre="#">Главная</a>
                     </li>
                     <li>
-                        <a href="">Компания</a>
+                        <a hre="#">Компания</a>
                     </li>
                     <li>v
-                        <a href="">Каталог</a>
+                        <a hre="#">Каталог</a>
                     </li>
                     <li>
-                        <a href="">Новости</a>
+                        <a hre="#">Новости</a>
                     </li>
                     <li>
-                        <a href="">Спецпредложения</a>
+                        <a hre="#">Спецпредложения</a>
                     </li>
                     <li>
-                        <a href="">Доставка</a>
+                        <a hre="#">Доставка</a>
                     </li>
                     <li>
-                        <a href="">Контакты</a>
+                        <a hre="#">Контакты</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-
 
     <!-- Так называемая Hero-area (зона для промоакций и прочих интересностей) -->
     <section class="hero-area">
@@ -90,7 +97,7 @@
                     Материалы
                 </div>
                 <div class="hero-item-motto">
-                    <a class="hero-item-btn" href="">На любой вкус</a>
+                    <a class="hero-item-btn" hre="#">На любой вкус</a>
                 </div>
 
             </div>
@@ -100,7 +107,7 @@
                     Инструмент
                 </div>
                 <div class="hero-item-motto">
-                    <a class="hero-item-btn" href="">На все случаи</a>
+                    <a class="hero-item-btn" hre="#">На все случаи</a>
                 </div>
             </div>
 
@@ -109,7 +116,7 @@
                     Техника
                 </div>
                 <div class="hero-item-motto">
-                    <a class="hero-item-btn" href="">Для стройки</a>
+                    <a class="hero-item-btn" hre="#">Для стройки</a>
                 </div>
             </div>
 
@@ -137,7 +144,7 @@
                 <div class="hero-slide-left"></div>
                 <div class="hero-slide-right"></div>
                 <div class="hero-button">
-                    <a class="btn" href="">Открыть каталог</a>
+                    <a class="btn" hre="#">Открыть каталог</a>
                 </div>
             </div>
 
@@ -146,7 +153,7 @@
                     Скидки 50%
                 </div>
                 <div class="hero-item-motto">
-                    <a class="hero-item-btn" href="">На 350 товаров</a>
+                    <a class="hero-item-btn" hre="#">На 350 товаров</a>
                 </div>
             </div>
 
@@ -155,7 +162,7 @@
                     Доставка
                 </div>
                 <div class="hero-item-motto">
-                    <a class="hero-item-btn" href="">Бесплатно</a>
+                    <a class="hero-item-btn" hre="#">Бесплатно</a>
                 </div>
             </div>
         </div>
@@ -167,7 +174,7 @@
             <header class="section-header clearfix">
                 <h2 class="section-header-title">Популярные товары:</h2>
                 <div class="section-header-button">
-                    <a class="btn" href="">Все популярные товары</a>
+                    <a class="btn" hre="#">Все популярные товары</a>
                 </div>
             </header>
 
@@ -183,8 +190,8 @@
                     25 500 Р.
                 </div>
                 <div class="shop-item-buttons">
-                    <a class="shop-item-buy-btn" href="">Купить</a>
-                    <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                    <a class="shop-item-buy-btn" hre="#">Купить</a>
+                    <a class="shop-item-bookmark-btn" hre="#">В закладки</a>
                 </div>
             </div>
 
@@ -200,8 +207,8 @@
                     15 500 Р.
                 </div>
                 <div class="shop-item-buttons">
-                    <a class="shop-item-buy-btn" href="">Купить</a>
-                    <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                    <a class="shop-item-buy-btn" hre="#">Купить</a>
+                    <a class="shop-item-bookmark-btn" hre="#">В закладки</a>
                 </div>
             </div>
 
@@ -217,8 +224,8 @@
                     25 500 Р.
                 </div>
                 <div class="shop-item-buttons">
-                    <a class="shop-item-buy-btn" href="">Купить</a>
-                    <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                    <a class="shop-item-buy-btn" hre="#">Купить</a>
+                    <a class="shop-item-bookmark-btn" hre="#">В закладки</a>
                 </div>
             </div>
 
@@ -233,8 +240,8 @@
                     25 500 Р.
                 </div>
                 <div class="shop-item-buttons">
-                    <a class="shop-item-buy-btn" href="">Купить</a>
-                    <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                    <a class="shop-item-buy-btn" hre="#">Купить</a>
+                    <a class="shop-item-bookmark-btn" hre="#">В закладки</a>
                 </div>
             </div>
         </div>
@@ -246,54 +253,54 @@
             <header class="section-header clearfix">
                 <h2 class="section-header-title">Популярные производители:</h2>
                 <div class="section-header-button">
-                    <a class="btn" href="">Все производители</a>
+                    <a class="btn" hre="#">Все производители</a>
                 </div>
             </header>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/bosch.jpg" width="220" height="145" alt="BOSCH">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/makita.jpg" width="220" height="145" alt="Makita">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/dewalt.jpg" width="220" height="145" alt="DeWALT">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/interskol.jpg" width="220" height="145" alt="Интерскол">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/hitachi.jpg" width="220" height="145" alt="HITACHI">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/lg.jpg" width="220" height="145" alt="LG">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/aeg.jpg" width="220" height="145" alt="AEG">
                 </a>
             </div>
 
             <div class="manufacturer-item">
-                <a href="">
+                <a hre="#">
                     <img class="manufacturer-item-image" src="img/brands/metabo.jpg" width="220" height="145" alt="metabo">
                 </a>
             </div>
@@ -332,7 +339,7 @@
                             <br>поднимая его на ваш этаж!
                         </p>
                     </div>
-                    
+
                     <div class="services-slide services-slide-warranty">
                         <h3>
                             Гарантия
@@ -345,7 +352,7 @@
                             <br>Дом уж восстановите как-нибудь сами.
                         </p>
                     </div>
-                    
+
                     <div class="services-slide services-slide-loan">
                         <h3>
                             Кредит
@@ -354,7 +361,7 @@
                             Залезть в долговую яму стало проще!
                             <br> Кредитные консультанты придут вам на помощь.
                         </p>
-                        <a class="btn" href="">Отправить заявку</a>
+                        <a class="btn" hre="#">Отправить заявку</a>
                     </div>
                 </div>
             </div>
@@ -368,7 +375,7 @@
                     Компания «Техномарт»
                 </h2>
                 <p>
-                    Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+                    Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
                 </p>
                 <p>
                     Мы можем доставить ваш товар в самые отдаленные точки России!
@@ -385,7 +392,7 @@
                         ЖелДорЭкспедиция
                     </li>
                 </ul>
-                <a class="btn" href="">Подробнее о компании</a>
+                <a class="btn" hre="#">Подробнее о компании</a>
             </div>
 
             <div class="about-contacts">
@@ -393,10 +400,11 @@
                     Контакты
                 </h2>
                 <p>
-                    Вы можете забрать товар сами, заехав к нам в офис:
+                    Вы можете забрать товар сами,
+                    <br>заехав в наш офис:
                 </p>
-                <img src="img/map.jpg" width="300" height="158" alt="">
-                <br><a class="btn" href="">Заблудились? Напишите нам!</a>
+                <img class="about-contacts-mini-map" src="img/map.jpg" width="300" height="158" alt="">
+                <br><a class="btn" hre="#">Заблудились? Напишите нам!</a>
             </div>
 
             <div class="about-big-map">
@@ -431,20 +439,21 @@
                 </div>
                 <ul class="footer-prim-nav">
                     <li>
-                        <a href="">Компания</a>
+                        <a hre="#">Компания</a>
                     </li>
                     <li>
-                        <a href="">Новости</a>
+                        <a hre="#">Новости</a>
                     </li>
                     <li>
-                        <a href="">Каталог</a>
+                        <a hre="#">Каталог</a>
                     </li>
                     <li>
-                        <a href="">Доставка</a>
+                        <a hre="#">Доставка</a>
                     </li>
                     <li>
-                        <a href="">Контакты</a>
+                        <a hre="#">Контакты</a>
                     </li>
+
                 </ul>
             </div>
 
@@ -455,16 +464,16 @@
                 </p>
                 <ul class="footer-second-nav">
                     <li>
-                        <a href="">Материалы</a>
+                        <a hre="#">Материалы</a>
                     </li>
                     <li>
-                        <a href="">Техника</a>
+                        <a hre="#">Техника</a>
                     </li>
                     <li>
-                        <a href="">Инструмент</a>
+                        <a hre="#">Инструмент</a>
                     </li>
                     <li>
-                        <a href="">Спецпредложения</a>
+                        <a hre="#">Спецпредложения</a>
                     </li>
                 </ul>
             </div>
@@ -477,9 +486,9 @@
                     <br>Все права защищены
                 </p>
                 <div class="social-buttons">
-                    <i class="social-icon icon-vk"></i>
-                    <i class="social-icon icon-facebook"></i>
-                    <i class="social-icon icon-instagramm"></i>
+                    <a class="" href="#"><i class="social-icon icon-vk"></i></a>
+                    <a class="" href="#"><i class="social-icon icon-facebook"></i></a>
+                    <a class="" href="#"><i class="social-icon icon-instagramm"></i></a>
                 </div>
                 <p class="mail-to">
                     Обратная связь:
@@ -487,7 +496,7 @@
                     <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                 </p>
                 <p class="made-by">
-                    Разработано:
+                    Разработано —
                     <br>
                     <a href="http://htmlacademy.ru">htmlacademy.ru</a>
                 </p>
