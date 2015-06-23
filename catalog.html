@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Техномарт</title>
 </head>
@@ -16,15 +17,18 @@
                     <a href="#">Техномарт</a>
                 </div>
                 <!-- http://stackoverflow.com/questions/3294572/is-input-well-formed-without-a-form -->
-                <input class="user-block-search" type="text" placeholder="Поиск:">
-                <div class="user-block-bookmarks">
-                    <a class="" href="">Закладки: 0</a>
+                <div class="user-block-search">
+                    <div class="user-block-search-icon icon-search"></div>
+                    <input class="user-block-search-input" type="text" placeholder="Поиск:">
                 </div>
-                <div class="user-block-cart cart-empty">
-                    <a class="" href="">Корзина: 0</a>
+                <div class="user-block-bookmarks">
+                    <a class="" hre="#"><i class="icon-bookmark"></i>Закладки: 0</a>
+                </div>
+                <div class="user-block-cart user-block-cart-full">
+                    <a class="" hre="#"><i class="icon-basket"></i>Корзина: 10</a>
                 </div>
                 <div class="user-block-checkout">
-                    <a class="" href="">Оформить заказ</a>
+                    <a class="" hre="#">Оформить заказ</a>
                 </div>
             </div>
         </div>
@@ -37,19 +41,20 @@
                 </div>
                 <div class="info-block-contacts">
                     <div class="info-block-phone">
-                        +7 (812) 555-05-55
+                        <i class="icon-phone"></i>+7 (812) 555-05-55
                     </div>
                     <div class="info-block-address">
-                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/18
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                     </div>
                 </div>
                 <div class="info-block-auth">
-                    <div class="info-block-user">
-                        Равшан Джамшутович
-                        <a class="user-exit" href=""></a>
+                    <div class="info-block-exit">
+                        <a class="info-block-user" href="#">Равшан Джамшутович</a>
                     </div>
-                    <a class="user-orders" href="">Мои заказы</a>
-                    <a class="user-profile" href="">Личный Кабинет</a>
+                    <div class="info-block-user-links">
+                        <a class="user-orders" href="#">Мои заказы</a>
+                        <a class="user-profile" href="#">Личный кабинет</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,25 +63,25 @@
             <nav class="main-nav">
                 <ul>
                     <li>
-                        <a href="">Главная</a>
+                        <a href="#">Главная</a>
                     </li>
                     <li>
-                        <a href="">Компания</a>
+                        <a href="#">Компания</a>
                     </li>
                     <li>v
-                        <a href="">Каталог</a>
+                        <a href="#">Каталог</a>
                     </li>
                     <li>
-                        <a href="">Новости</a>
+                        <a href="#">Новости</a>
                     </li>
                     <li>
-                        <a href="">Спецпредложения</a>
+                        <a href="#">Спецпредложения</a>
                     </li>
                     <li>
-                        <a href="">Доставка</a>
+                        <a href="#">Доставка</a>
                     </li>
                     <li>
-                        <a href="">Контакты</a>
+                        <a href="#">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -88,13 +93,13 @@
             <div class="breadcumbs">
                 <ul>
                     <li>
-                        <a href=""><i class="icon-home">-home-icon-</i></a>
+                        <a href="#"><i class="icon-home"></i></a>
                     </li>
                     <li>
-                        <a href="">Каталог</a>
+                        <a href="#">Каталог</a>
                     </li>
                     <li>
-                        <a href="">Инструмент</a>
+                        <a href="#">Инструмент</a>
                     </li>
                     <li>
                         Перфораторы
@@ -109,7 +114,7 @@
             <!-- Фильтр отображения продуктов в каталоге -->
             <div class="shop-filter">
                 <div class="shop-filter-header">
-                    Фильтр
+                    Фильтр:
                 </div>
 
                 <form action="/echo" method="post">
@@ -161,20 +166,20 @@
                     <!-- Тут я повелся на вузуальное отображение, хотя сейчас, когда пишу код, думаю что будет логичнее через форму с radio это сделать -->
                     Сортировка:
                     <ul>
-                        <li>
-                            <a class="selected" href="">По цене</a>
+                        <li class="sort-price sort-active">
+                            <a class="selected" href="#">По цене</a>
                         </li>
-                        <li>
-                            <a href="">По типу</a>
+                        <li class="sort-type">
+                            <a href="#">По типу</a>
                         </li>
-                        <li>
-                            <a href="">По функционалу</a>
+                        <li class="sort-function">
+                            <a href="#">По функционалу</a>
                         </li>
-                        <li>
-                            <a class="selected" href=""><i class="icon-up-dir"></i></a>
+                        <li class="sort-inc sort-active">
+                            <a class="selected" href="#"><i class="icon-up-dir"></i></a>
                         </li>
-                        <li>
-                            <a href=""><i class="icon-down-dir"></i></a>
+                        <li class="sort-dec">
+                            <a href="#"><i class="icon-down-dir"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -193,8 +198,8 @@
                             15 500 Р.
                         </div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -210,8 +215,8 @@
                             25 500 Р.
                         </div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -224,12 +229,10 @@
                         <div class="shop-item-current-price">
                             25 500 Р.
                         </div>
-                        <div class="ribbon">
-                            new
-                        </div>
+                        <div class="ribbon-new"></div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -245,8 +248,8 @@
                             15 500 Р.
                         </div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -261,12 +264,10 @@
                         <div class="shop-item-current-price">
                             25 500 Р.
                         </div>
-                        <div class="ribbon">
-                            new
-                        </div>
+                        <div class="ribbon-new"></div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -280,8 +281,8 @@
                             25 500 Р.
                         </div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -296,12 +297,10 @@
                         <div class="shop-item-current-price">
                             15 500 Р.
                         </div>
-                        <div class="ribbon">
-                            new
-                        </div>
+                        <div class="ribbon-new"></div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -317,8 +316,8 @@
                             25 500 Р.
                         </div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
 
@@ -332,8 +331,8 @@
                             25 500 Р.
                         </div>
                         <div class="shop-item-buttons">
-                            <a class="shop-item-buy-btn" href="">Купить</a>
-                            <a class="shop-item-bookmark-btn" href="">В закладки</a>
+                            <a class="shop-item-buy-btn" href="#">Купить</a>
+                            <a class="shop-item-bookmark-btn" href="#">В закладки</a>
                         </div>
                     </div>
                 </div>
@@ -341,30 +340,29 @@
                 <!-- Навигация по страницам каталога -->
                 <div class="shop-catalog-paginator">
                     <ul>
-                        <li>
+                        <li class="active-page">
                             1
                         </li>
                         <li>
-                            <a href="">2</a>
+                            <a href="#">2</a>
                         </li>
                         <li>
-                            <a href="">3</a>
+                            <a href="#">3</a>
                         </li>
                         <li>
-                            <a href="">Следующая</a>
+                            <a class="next-page" href="#">Следующая</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </main>
-    
-    <section class="services">
+
+    <section class="shop-about">
         <div class="container clearfix">
-            <h2 class="services-title">Пара слов о перфораторах</h2>
+            <h2 class="shop-about-title">Пара слов о перфораторах</h2>
             <p>
-                Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+                Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
             </p>
         </div>
     </section>
@@ -377,19 +375,19 @@
                 </div>
                 <ul class="footer-prim-nav">
                     <li>
-                        <a href="">Компания</a>
+                        <a href="#">Компания</a>
                     </li>
                     <li>
-                        <a href="">Новости</a>
+                        <a href="#">Новости</a>
                     </li>
                     <li>
-                        <a href="">Каталог</a>
+                        <a href="#">Каталог</a>
                     </li>
                     <li>
-                        <a href="">Доставка</a>
+                        <a href="#">Доставка</a>
                     </li>
                     <li>
-                        <a href="">Контакты</a>
+                        <a href="#">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -401,16 +399,16 @@
                 </p>
                 <ul class="footer-second-nav">
                     <li>
-                        <a href="">Материалы</a>
+                        <a href="#">Материалы</a>
                     </li>
                     <li>
-                        <a href="">Техника</a>
+                        <a href="#">Техника</a>
                     </li>
                     <li>
-                        <a href="">Инструмент</a>
+                        <a href="#">Инструмент</a>
                     </li>
                     <li>
-                        <a href="">Спецпредложения</a>
+                        <a href="#">Спецпредложения</a>
                     </li>
                 </ul>
             </div>

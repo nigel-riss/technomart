@@ -223,6 +223,7 @@
 
 body {
     /* Box-model */
+    padding: 0;
     min-width: 960px;
     margin-top: 20px;
     margin-bottom: 200px;
@@ -413,6 +414,8 @@ a { cursor: pointer;}
     box-dsizing: border-box;
     bordder: 1px dotted red;
 }
+
+.user-block-cart-full { background-color: #ee3643; }
 
 .user-block-bookmarks i,
 .user-block-cart i {
@@ -633,6 +636,118 @@ a { cursor: pointer;}
 .info-block-btn:hover i { color: #32425c; }
 
 .info-block-btn:active i { color: #c5c5c5; }
+
+.info-block-exit {
+    /* Visual */
+    background-color: #fff;
+}
+
+.info-block-user {
+    /* Positioning */
+    position: relative;
+    
+    /* Box-model */
+    display: block;
+    padding: 12px 0;
+    padding-left: 47px;
+    
+    /* Typography */
+    color: #000;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.info-block-user::before {
+    content: "\1f468";
+    
+    /* Positioning */
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    
+    /* Box-model */
+    display: block;
+    
+    /* Typography */
+    color: #c5c5c5;
+    font-family: "symbols-technomart";
+    font-size: 18px;
+}
+
+.info-block-user::after {
+    content: "\241b";
+    
+    /* Positioning */
+    position: absolute;
+    
+    /* Box-model */
+    display: block;
+    right: 10px;
+    top: 12px;
+    
+    /* Typography */
+    color: #c5c5c5;
+    font-family: "symbols-technomart";
+    font-size: 22px;
+}
+
+.info-block-user:hover::before{ color: #32425c; }
+
+.info-block-user:hover::after { color: #32425c; }
+
+.info-block-user:active { color: #cacaca; }
+
+.info-block-user:active::before{ color: #c5c5c5; }
+
+.info-block-user:active::after { color: #c5c5c5; }
+
+.info-block-user-links {
+    /* Positioning */
+    position: relative;
+    
+    /* Typography */
+    font-size: 0;
+    text-align: left;
+}
+
+.info-block-user-links::before {
+    content: "";
+    
+    /* Positioning */
+    position: absolute;
+    top: 14px;
+    left: 108px;
+    
+    /* Box-model */
+    display: block;
+    height: 4px;
+    width: 4px;
+    
+    /* Visual */
+    background-color: #32425c;
+    border-radius: 50%;
+}
+
+.user-orders,
+.user-profile {
+    /* Box-model */
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 18px;
+    padding-right: 14px;
+    
+    /* Typography */
+    color: #32425c;
+    font-size: 16px;
+}
+
+.user-orders:hover,
+.user-profile:hover {
+    /* Typography */
+    color: #ee3643;
+}
 
 .main-nav {
     /* Box-model */
@@ -1670,10 +1785,24 @@ a { cursor: pointer;}
 
 /* CATALOG ONLY ITEMS */
 .breadcumbs {
-    
+    /* Box-model */
+    margin-top: -37px;
+    margin-bottom: 19px;
+}
+
+.breadcumbs i {
+    /* Typography */
+    color: #c1c6ce;
+    font-family: "symbols-technomart";
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .breadcumbs ul {
+    /* Positioning */
+    position: relative;
+    left: -4px;
+    
     /* Box-model */
     padding: 0;
     margin: 0;
@@ -1693,6 +1822,7 @@ a { cursor: pointer;}
     /* Typography */
     font-size: 13px;
     font-family: "PT Sans", Arial, sans-serif;
+    line-height: 16px;
     text-transform: uppercase;
 }
 
@@ -1701,22 +1831,33 @@ a { cursor: pointer;}
     position: relative;
     
     /* Box-model */
-    padding-right: 20px;
+    padding-right: 15px;
     
     /* Typography */
     color: #000;
     text-decoration: none;
 }
 
+.breadcumbs a:hover { color: #ee3643; }
+
 .breadcumbs a::after {
-    content: ">";
+    content: "\3e";
     
     /* Box-model */
-    padding-left: 20px;
+    padding-left: 15px;
+    
+    /* Typography */
+    color: #c1c6ce;
+    font-family: "symbols-technomart";
+    font-size: 14px;
+    line-height: 16px;
 }
+
+.breadcumbs a:hover i { color: #ee3643; }
 
 .shop-header {
     /* Box-model */
+    padding: 10px 27px;
     margin-bottom: 20px;
     
     /* Visual */
@@ -1724,12 +1865,11 @@ a { cursor: pointer;}
 }
 
 .shop-header h1 {
-    /* Box-model */
-    padding: 30px;
-    
     /* Typography */
     color: #32425c;
+    font-size: 30px;
     font-weight: normal;
+    line-height: 29px;
     text-transform: uppercase;
 }
 
@@ -1737,6 +1877,22 @@ a { cursor: pointer;}
     /* Box-model */
     float: left;
     width: 220px;
+}
+
+.shop-filter-header {
+    /* Box-model */
+    padding-left: 18px;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+    
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    
+    /* Visual */
+    background-color: #f7f3ec;
 }
 
 .shop-catalog {
@@ -1747,15 +1903,26 @@ a { cursor: pointer;}
 
 .shop-catalog-sorting {
     /* Box-model */
+    padding-left: 18px;
+    padding-top: 7px;
+    padding-bottom: 4px;
     margin-bottom: 20px;
+    
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 23px;
+    text-transform: uppercase;
+    
     /* Visual */
     background-color: #f7f3ec;
 }
 
 .shop-catalog-sorting ul {
     /* Box-model */
-    float:right;
+    display: inline-block;
     padding: 0;
+    padding-left: 136px;
     margin: 0;
     
     /* Visual */
@@ -1768,6 +1935,61 @@ a { cursor: pointer;}
     vertical-align: top;
 }
 
+.shop-catalog-sorting a {
+    /* Box-model */
+    box-sizing: border-box;
+    border-bottom: 1px dotted #ee3643;
+    
+    /* Typography */
+    color: #c6c2bd;
+    text-decoration: none;
+}
+
+.shop-catalog-sorting a:hover {
+    /* Box-model */
+    border-bottom: 1px solid #ee3643;
+    
+    /* Typography */
+    color: #000;
+}
+
+.sort-active a{
+    /* Box-model */
+    border: none;
+    
+    /* Typography */
+    color: #ee3643;
+}
+
+.sort-price { padding-right: 67px; }
+
+.sort-type { padding-right: 62px; }
+
+.sort-function { padding-right: 32px; }
+
+.sort-inc a{
+    /* Box-model */
+    border: none;
+    
+    /* Typography */
+    font-size: 23px;
+}
+
+.sort-inc a:hover { border: none; }
+
+.sort-dec a{
+    /* Box-model */
+    border: none;
+    margin-left: -3px;
+    
+    /* Typography */
+    font-size: 23px;
+}
+
+.sort-dec a:hover { border: none; }
+
+.shop-catalog-items { margin-bottom: 32px; }
+
 .shop-catalog-items .shop-item {
     /* Box-model */
     margin-bottom: 20px;
@@ -1779,13 +2001,17 @@ a { cursor: pointer;}
 }
 
 .shop-catalog-paginator {
-    
+    /* Box-model */
+    margin-bottom: 60px;
 }
 
 .shop-catalog-paginator ul {
     /* Box-model */
     padding: 0;
     margin: 0;
+    
+    /* Typography */
+    font-size: 0;
     
     /* Visual */
     list-style: none;
@@ -1795,6 +2021,89 @@ a { cursor: pointer;}
     /* Box-model */
     display: inline-block;
     vertical-align: top;
+    margin-right: 10px;
+    
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    /* Visual */
+    background-color: #fff;
+}
+
+.shop-catalog-paginator .active-page {
+    /* Box-model */
+    padding: 10px 0;
+    width: 38px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    
+    /* Typography */
+    color: #fff;
+    
+    /* Visual */
+    background-color: #ee3643;
+}
+
+.shop-catalog-paginator .next-page { width:140px; }
+
+.shop-catalog-paginator a {
+    /* Box-model */
+    display: block;
+    padding: 9px 0;
+    width: 38px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    
+    /* Typography */
+    color: #000;
+    text-decoration: none;
+}
+
+.shop-catalog-paginator a:hover { border-color: #bdc6ca; }
+
+.shop-catalog-paginator a:active { border-color: #ee3643; }
+
+.shop-about {
+    /* Box-model */
+    padding-top: 65px;
+    padding-bottom: 55px;
+    
+    /* Visual */
+    background-color: #f2f6f8;
+    background-colodfr: red;
+}
+
+.shop-about .container {
+    /* Box-model */
+    padding-right: 0;
+    width: 950px;
+}
+
+.shop-about-title {
+    /* Box-model */
+    padding: 0;
+    margin: 0;
+    margin-bottom: 26px;
+    
+    /* Typography */
+    font-size: 30px;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.shop-about p {
+    /* Typography */
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
 }
 
 /* INVISIBLE AND NOT DONE YET ELEMENTS OF THE PAGE */
