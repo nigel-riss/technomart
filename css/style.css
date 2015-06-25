@@ -2116,6 +2116,8 @@ input[type="radio"]:checked + .radio-label::before {
     background-color: #fff;
 }
 
+.shop-filter button:hover { border-color: #bdc6ca; }
+
 .shop-catalog {
     /* Box-model */
     float: right;
