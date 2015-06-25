@@ -9,6 +9,19 @@
 </head>
 
 <body>
+    <!-- Ask. Попапы. Вообще-то по хорошему надо положить в конец, но мля! Не работает! -->
+    <div class="popup-overlay">
+        <div class="popup-window">
+            <div class="popup-text">
+                Товар добавлен в корзину!
+            </div>
+            <div class="popup-buttons">
+                <a class="btn btn-checkout" href="#">Оформить заказ</a>
+                <a class="btn-cancel btn-continue-shopping" href="#">Продолжить покупки</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Шапка нашего сайта -->
     <header class="main-header">
         <div class="user-block">
@@ -121,39 +134,63 @@
                     <fieldset>
                         <legend>Цена:</legend>
                         <!-- Увы и ах http://lists.w3.org/Archives/Public/public-html/2012Sep/0472.html
-                        Пока оставляю так. Буду потом думать -->
-                        <input type="range">
-                        <input type="range">
-                        <input type="text" value="0"> -
-                        <input type="text" value="30000">
+                        Придется делать на JS -->
+                        <div class="range-filter">
+                            <div class="range-filter-controls">
+                                <div class="range-filter-scale">
+                                    <div class="bar" style="width:85%;"></div>
+                                </div>
+                                <div class="toggle min-toggle"></div>
+                                <div class="toggle max-toggle"></div>
+                            </div>
+
+                            <div class="range-filter-price-controls">
+                                <input class="min-price" type="text" value="0"> —
+                                <input class="max-price" type="text" value="30000">
+                            </div>
+                        </div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Производители:</legend>
-                        <label>
-                            <input type="checkbox" value="BOSCH" checked>BOSCH
+
+                        <input id="bosch" type="checkbox" value="BOSCH" checked>
+                        <label class="checkbox-label" for="bosch">
+                            BOSCH
                         </label>
-                        <label>
-                            <input type="checkbox" value="Interskol">Интерскол
+
+                        <input id="interskol" type="checkbox" value="Interskol" disabled>
+                        <label class="checkbox-label" for="interskol">
+                            Интерскол
                         </label>
-                        <label>
-                            <input type="checkbox" value="Makita" checked>Makita
+
+                        <input id="makita" type="checkbox" value="Makita" checked>
+                        <label class="checkbox-label" for="makita">
+                            Makita
                         </label>
-                        <label>
-                            <input type="checkbox" value="DeWALT">DeWALT
+
+                        <input id="dewalt" type="checkbox" value="DeWALT">
+                        <label class="checkbox-label" for="dewalt">
+                            DeWALT
                         </label>
-                        <label>
-                            <input type="checkbox" value="HITACHI">HITACHI
+
+                        <input id="hitachi" type="checkbox" value="HITACHI">
+                        <label class="checkbox-label" for="hitachi">
+                            HITACHI
                         </label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Питание:</legend>
-                        <label>
-                            <input type="radio" name="power-supply" value="battery" checked> Аккумуляторные
+
+                        <input id="battery" type="radio" name="power-supply" value="battery" checked>
+                        <label class="radio-label" for="battery">
+                            Аккумуляторные
                         </label>
-                        <label>
-                            <input type="radio" name="power-supply" value="mains"> Сетевые
+
+                        <input id="mains" type="radio" name="power-supply" value="mains">
+                        <label class="radio-label" for="mains">
+                            Сетевые
                         </label>
                     </fieldset>
                     <button type="submit">Показать</button>

@@ -9,6 +9,29 @@
 </head>
 
 <body>
+    <div class="popup-overlay popup-report">
+        <div class=" popup-window">
+            <form class="report-form" vaction="/echo" method="post">
+                <div class="name-area">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+                </div>
+                
+                <div class="email-area">
+                    <label for="email">Ваш e-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Для отправки ответа">
+                </div>
+                
+                <label for="letter">Текст письма:</label>
+                <textarea name="report-text" placeholder="В свободной форме"></textarea>
+            </form>
+            <div class="popup-buttons">
+                <a class="btn btn-send-report" href="#">Отправить</a>
+                <a class="btn-cancel btn-cancel-report" href="#">Отмена</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Шапка нашего сайта -->
     <header class="main-header">
         <div class="user-block">
@@ -404,29 +427,12 @@
                     <br>заехав в наш офис:
                 </p>
                 <img class="about-contacts-mini-map" src="img/map.jpg" width="300" height="158" alt="">
-                <br><a class="btn" href="#">Заблудились? Напишите нам!</a>
+                <br><a class="btn btn-report" href="#">Заблудились? Напишите нам!</a>
             </div>
 
             <div class="about-big-map">
                 <img src="img/big-map.jpg" width="940" height="447" alt="">
                 <button class="about-big-map-close">Х</button>
-            </div>
-
-            <div class="about-contact-form popup-window">
-                <form action="/echo" method="post">
-                    <label>Ваше имя:
-                        <input class="contact-form-name" type="text" name="name" placeholder="Представтесь, пожалуйста">
-                    </label>
-                    <label>Ваш e-mail:
-                        <input class="contact-form-email" type="email" name="email" placeholder="Для отправки ответа">
-                    </label>
-                    <label>
-                        Текст письма:
-                        <textarea class="contact-form-text" placeholder="В свободной форме"></textarea>
-                    </label>
-                    <button class="btn" type="submit">Отправить</button>
-                    <button class="cancel-btn">Отмена</button>
-                </form>
             </div>
         </div>
     </section>
@@ -503,6 +509,8 @@
             </div>
         </section>
     </footer>
+    
+    <script src="js/script.js"></script>
 </body>
 
 </html>
