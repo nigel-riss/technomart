@@ -383,17 +383,16 @@ a { cursor: pointer; }
     
     /* Typography */
     color: #fff;
+    color: rgba(255, 255, 255, .3);
     font-family: "symbols-technomart";
     font-size: 17px;
     line-height: 18px;
     text-align: center;
-    
-    /* Visual */
-    opacity: .3;
 }
 
-.user-block-search-input:hover .user-block-search-icon { opacity: 1; }
-.user-block-search-input:focus .user-block-search-icon { color: red; }
+.user-block-search-input:hover + .user-block-search-icon { color: #fff; }
+
+.user-block-search-input:focus + .user-block-search-icon { color: #ee3643; }
 
 .user-block-bookmarks,
 .user-block-cart {
@@ -2420,7 +2419,7 @@ input[type="radio"]:checked + .radio-label::before {
 .popup-overlay {
     /* Positioning */
     position: fixed;
-    top 0;
+    top: 0;
     left: 0;
     
     /* Box-model */

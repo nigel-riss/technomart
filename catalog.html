@@ -9,20 +9,6 @@
 </head>
 
 <body>
-    <!-- Ask. Попапы. Вообще-то по хорошему надо положить в конец, но мля! Не работает! -->
-    <div class="popup-overlay">
-        <div class="popup-window">
-            <div class="popup-close-icon"></div>
-            <div class="popup-text">
-                Товар добавлен в корзину!
-            </div>
-            <div class="popup-buttons">
-                <a class="btn btn-checkout" href="#">Оформить заказ</a>
-                <a class="btn-cancel btn-continue-shopping" href="#">Продолжить покупки</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Шапка нашего сайта -->
     <header class="main-header">
         <div class="user-block">
@@ -476,6 +462,23 @@
             </div>
         </section>
     </footer>
+
+    <!--  Попапы.  -->
+    <!-- Добавление товара в корзину -->
+    <div class="popup-overlay popup-shopping">
+        <div class="popup-window">
+            <div class="popup-close-icon"></div>
+            <div class="popup-text">
+                Товар добавлен в корзину!
+            </div>
+            <div class="popup-buttons">
+                <a class="btn btn-checkout" href="#">Оформить заказ</a>
+                <a class="btn-cancel btn-continue-shopping" href="#">Продолжить покупки</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/catalog-script.js"></script>
 </body>
 
 </html>

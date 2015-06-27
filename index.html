@@ -9,46 +9,6 @@
 </head>
 
 <body>
-    <!-- Попапы -->
-    <!-- Форма отправки отзыва -->
-    <div class="popup-overlay popup-report">
-        <div class=" popup-window">
-            <div class="popup-close-icon"></div>
-            <form class="report-form" action="/echo" method="post">
-                <div class="name-area">
-                    <label for="name">Ваше имя:</label>
-                    <input  id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
-                </div>
-
-                <div class="email-area">
-                    <label for="email">Ваш e-mail:</label>
-                    <input  id="email" type="email" name="email" placeholder="Для отправки ответа">
-                </div>
-
-                <label for="letter">Текст письма:</label>
-                <textarea id="letter" name="report-text" placeholder="В свободной форме"></textarea>
-            </form>
-            <div class="popup-buttons">
-                <a class="btn btn-send-report" href="#">Отправить</a>
-                <a class="btn-cancel btn-cancel-report" href="#">Отмена</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Добавление товара в корзину -->
-    <div class="popup-overlay popup-shopping">
-        <div class="popup-window">
-            <div class="popup-close-icon"></div>
-            <div class="popup-text">
-                Товар добавлен в корзину!
-            </div>
-            <div class="popup-buttons">
-                <a class="btn btn-checkout" href="#">Оформить заказ</a>
-                <a class="btn-cancel btn-continue-shopping" href="#">Продолжить покупки</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Шапка нашего сайта -->
     <header class="main-header">
         <div class="user-block">
@@ -56,10 +16,9 @@
                 <div class="user-block-logo">
                     <a href="#">Техномарт</a>
                 </div>
-                <!-- http://stackoverflow.com/questions/3294572/is-input-well-formed-without-a-form -->
                 <div class="user-block-search">
-                    <div class="user-block-search-icon icon-search"></div>
                     <input class="user-block-search-input" type="text" placeholder="Поиск:">
+                    <div class="user-block-search-icon icon-search"></div>
                 </div>
                 <div class="user-block-bookmarks">
                     <a class="" href="#"><i class="icon-bookmark"></i>Закладки: 0</a>
@@ -535,6 +494,46 @@
             </div>
         </section>
     </footer>
+
+    <!-- Попапы -->
+    <!-- Форма отправки отзыва -->
+    <div class="popup-overlay popup-report">
+        <div class=" popup-window">
+            <div class="popup-close-icon"></div>
+            <form class="report-form" action="/echo" method="post">
+                <div class="name-area">
+                    <label for="name">Ваше имя:</label>
+                    <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+                </div>
+
+                <div class="email-area">
+                    <label for="email">Ваш e-mail:</label>
+                    <input id="email" type="email" name="email" placeholder="Для отправки ответа">
+                </div>
+
+                <label for="letter">Текст письма:</label>
+                <textarea id="letter" name="report-text" placeholder="В свободной форме"></textarea>
+            </form>
+            <div class="popup-buttons">
+                <a class="btn btn-send-report" href="#">Отправить</a>
+                <a class="btn-cancel btn-cancel-report" href="#">Отмена</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавление товара в корзину -->
+    <div class="popup-overlay popup-shopping">
+        <div class="popup-window">
+            <div class="popup-close-icon"></div>
+            <div class="popup-text">
+                Товар добавлен в корзину!
+            </div>
+            <div class="popup-buttons">
+                <a class="btn btn-checkout" href="#">Оформить заказ</a>
+                <a class="btn-cancel btn-continue-shopping" href="#">Продолжить покупки</a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

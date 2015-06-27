@@ -110,10 +110,12 @@ addEventListener("click", function (event) {
 
 checkoutLink.addEventListener("click", function (event) {
     //Тут должен быть код, связанный с чекаутом, но поскольку это учебный проект, просто закроем окошко, чтобы проверяющий мог спокойно проверять дальше.
+    event.preventDefault();
     shoppingPopup.classList.remove("popup-content-show");
 });
 
 continueShoppingLink.addEventListener("click", function (event) {
+    event.preventDefault();
     shoppingPopup.classList.remove("popup-content-show");
 });
 
