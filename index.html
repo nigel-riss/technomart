@@ -9,25 +9,42 @@
 </head>
 
 <body>
+    <!-- Попапы -->
+    <!-- Форма отправки отзыва -->
     <div class="popup-overlay popup-report">
         <div class=" popup-window">
-            <form class="report-form" vaction="/echo" method="post">
+            <div class="popup-close-icon"></div>
+            <form class="report-form" action="/echo" method="post">
                 <div class="name-area">
                     <label for="name">Ваше имя:</label>
-                    <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+                    <input  id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
                 </div>
-                
+
                 <div class="email-area">
                     <label for="email">Ваш e-mail:</label>
-                    <input type="email" name="email" id="email" placeholder="Для отправки ответа">
+                    <input  id="email" type="email" name="email" placeholder="Для отправки ответа">
                 </div>
-                
+
                 <label for="letter">Текст письма:</label>
-                <textarea name="report-text" placeholder="В свободной форме"></textarea>
+                <textarea id="letter" name="report-text" placeholder="В свободной форме"></textarea>
             </form>
             <div class="popup-buttons">
                 <a class="btn btn-send-report" href="#">Отправить</a>
                 <a class="btn-cancel btn-cancel-report" href="#">Отмена</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавление товара в корзину -->
+    <div class="popup-overlay popup-shopping">
+        <div class="popup-window">
+            <div class="popup-close-icon"></div>
+            <div class="popup-text">
+                Товар добавлен в корзину!
+            </div>
+            <div class="popup-buttons">
+                <a class="btn btn-checkout" href="#">Оформить заказ</a>
+                <a class="btn-cancel btn-continue-shopping" href="#">Продолжить покупки</a>
             </div>
         </div>
     </div>
@@ -144,7 +161,7 @@
             </div>
 
             <div class="hero-slider">
-                <div class="hero-slider-slide hero-slider-slide1">
+                <div class="hero-slider-slide hero-slider-slide1 hero-slide-show">
                     <!-- <img class="hero-image" src="img/hero/slide1.jpg" alt=""> -->
                     <div class="hero-slider-title">
                         Перфораторы
@@ -152,22 +169,27 @@
                     <div class="hero-slider-motto">
                         Настоящие мужские игрушки
                     </div>
+                    <div class="hero-button">
+                        <a class="btn" href="#">Открыть каталог</a>
+                    </div>
                 </div>
 
                 <div class="hero-slider-slide hero-slider-slide2">
-                    <img class="hero-image" src="img/hero/slide2.jpg" alt="">
+                    <!-- <img class="hero-image" src="img/hero/slide2.jpg" alt=""> -->
                     <div class="hero-slider-title">
                         Дрели
                     </div>
                     <div class="hero-slider-motto">
                         Соседям на радость!
                     </div>
+                    <div class="hero-button">
+                        <a class="btn" href="#">Открыть каталог</a>
+                    </div>
                 </div>
 
-                <div class="hero-slide-left"></div>
-                <div class="hero-slide-right"></div>
-                <div class="hero-button">
-                    <a class="btn" href="#">Открыть каталог</a>
+                <div class="slide-left"><i class="icon-left"></i>
+                </div>
+                <div class="slide-right"><i class="icon-right"></i>
                 </div>
             </div>
 
@@ -395,7 +417,7 @@
         <div class="container clearfix">
             <div class="about-company">
                 <h2>
-                    Компания «Техномарт»
+                    Компания «Техномарт» 
                 </h2>
                 <p>
                     Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
@@ -426,13 +448,17 @@
                     Вы можете забрать товар сами,
                     <br>заехав в наш офис:
                 </p>
-                <img class="about-contacts-mini-map" src="img/map.jpg" width="300" height="158" alt="">
+                <a class="show-big-map" href="#"><img class="about-contacts-mini-map" src="img/map.jpg" width="300" height="158" alt="">
+                </a>
                 <br><a class="btn btn-report" href="#">Заблудились? Напишите нам!</a>
             </div>
 
-            <div class="about-big-map">
-                <img src="img/big-map.jpg" width="940" height="447" alt="">
-                <button class="about-big-map-close">Х</button>
+            <div class="about-big-map-overlay">
+                <div class="about-big-map-container">
+                    <div class="popup-close-icon"></div>
+                    <iframe class="about-big-real-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.323083299999993!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1435263125306" width="940" height="447" style="border:0" allowfullscreen></iframe>
+                    <img class="" src="img/big-map.jpg" width="940" height="447" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -509,7 +535,7 @@
             </div>
         </section>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 

@@ -228,7 +228,7 @@ body {
     
     /* Typography */
     font-size: 17px;
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     line-height: 1;
     color: #000;
@@ -237,7 +237,7 @@ body {
     background-color: #fff;
 }
 
-a { cursor: pointer;}
+a { cursor: pointer; }
 
 .container {
     /* Box-model */
@@ -263,14 +263,12 @@ a { cursor: pointer;}
 }
 
 .user-block {
-    /* Typography */
-    color: #fff;
-    
     /* Box-model */
     height: 42px;
     margin-bottom: 46px;
     
     /* Typography */
+    color: #fff;
     font-size: 0;
     
     /* Visual */
@@ -291,9 +289,6 @@ a { cursor: pointer;}
     font-size: 24px;
     text-align: center;
     text-transform: uppercase;
-    
-    /* Visual */
-    background-color: #ee3643;
 }
 
 .user-block-logo a {
@@ -306,15 +301,22 @@ a { cursor: pointer;}
     /* Typography */
     color: #fff;
     text-decoration: none;
+    
+    /* Visual */
+    background-color: #ee3643;
 }
+
+.user-block-logo a:hover { background-color: #ca2c37; }
+
+.user-block-logo a:active { background-color: #ba2732; }
 
 .user-block-logo::after {
     content: "";
     
     /* Positioning */
     position: absolute;
-    left: 0;
     bottom: -5px;
+    left: 0;
     
     /* Box-model */
     height: 5px;
@@ -347,7 +349,7 @@ a { cursor: pointer;}
     
     /* Typography */
     color: #fff;
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
     
@@ -390,10 +392,8 @@ a { cursor: pointer;}
     opacity: .3;
 }
 
-.user-block-search:hover .user-block-search-icon { opacity: 1; }
-.user-block-search-input:focus ~ .user-block-search-icon {
-    background: red;
-}
+.user-block-search-input:hover .user-block-search-icon { opacity: 1; }
+.user-block-search-input:focus .user-block-search-icon { color: red; }
 
 .user-block-bookmarks,
 .user-block-cart {
@@ -938,10 +938,17 @@ a { cursor: pointer;}
     position: relative;
     
     /* Box-model */
+    width: 620px;
+    height: 266px;
+    
+    /* Box-model */
     float: left;
 }
 
 .hero-slider-slide {
+    /* Positioning */
+    position: relative;
+    
     /* Box-model */
     height: 266px;
     width: 620px;
@@ -964,22 +971,9 @@ a { cursor: pointer;}
     
     /* Typography */
     color: #fff;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: normal;
-}
-
-.hero-slider-slide1 {
-    /* Visual */
-    background-image: url("../img/hero/slide1.jpg");
-}
-
-.hero-slider-slide2 {
-    /* Box-model */
-    display:none;
-    
-    /* Visual */
-    background-image: url("../img/hero/slide2.jpg");
 }
 
 .hero-button {
@@ -993,6 +987,52 @@ a { cursor: pointer;}
     /* Box-model */
     width: 135px;
 }
+
+.slide-left,
+.slide-right {
+    /* Positioning */
+    position: absolute;
+    top:112px;
+    left: 4px;
+    
+    /* Box-model */
+    display: inline-block;
+    
+    /* Typography */
+    color: #fff;
+    font-size: 45px;
+    
+    /* Visual */
+    cursor: pointer;
+}
+
+.slide-right { left: 557px; }
+
+.slide-left:hover,
+.slide-right:hover {
+    /* Visual */
+    background-color: rgba(0, 0 , 0, .2);
+}
+
+.hero-slider-slide1 {
+    /* Box-model */
+    display:none;
+    
+    /* Visual */
+    background-color: #6d5d4a;
+    background-image: url("../img/hero/slide1.jpg");
+}
+
+.hero-slider-slide2 {
+    /* Box-model */
+    display:none;
+    
+    /* Visual */
+    background-color: #6d5d4a;
+    background-image: url("../img/hero/slide2.jpg");
+}
+
+.hero-slide-show { display: block; }
 
 .section-header {
     /* Box-model */
@@ -1179,7 +1219,7 @@ a { cursor: pointer;}
     margin-bottom: 12px;
 
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 20px;
@@ -1193,7 +1233,7 @@ a { cursor: pointer;}
     
     /* Typography */
     color: #999;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
     font-weight: bold;
     text-align: center;
@@ -1209,7 +1249,7 @@ a { cursor: pointer;}
     
     /* Typography */
     color: #fff;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
     font-weight: bold;
     line-height: 18px;
@@ -1257,6 +1297,7 @@ a { cursor: pointer;}
     margin-bottom: 20px;
     
     /* Visual */
+    background-color: #fff;
     box-shadow: inset 0 0 0 1px #e5e5e5; 
 }
 
@@ -1291,6 +1332,7 @@ a { cursor: pointer;}
     background-colodfr: red;
 }
 
+/* Тут меняем немного сетку, т.к. дизайнер нарисовал фон выезжающий за пределы сетки. В реальном проекте я бы такого не сделал, но в связи с требованием критериев Б11 тут сделано вот так */
 .services .container {
     /* Box-model */
     padding-right: 0;
@@ -1305,7 +1347,7 @@ a { cursor: pointer;}
     
     /* Typography */
     font-size: 30px;
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     line-height: 1;
     color: #000;
@@ -1317,7 +1359,7 @@ a { cursor: pointer;}
     margin-bottom: 71px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -1491,9 +1533,50 @@ a { cursor: pointer;}
 }
 
 .about {
+    /* Positioning */
+    position: relative;
+    
     /* Box-model */
     padding-top: 79px;
     padding-bottom: 86px;
+}
+
+.about-big-map-overlay {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* Box-model */
+    display: none;
+    width: 100%;
+    height: 100%;
+    
+    /* Typography */
+    texft-align: center;
+}
+
+.about-big-map-container {
+    /* Positioning */
+    position: relative;
+    
+    /* Box-model */
+    margin: 0 auto;
+    margin-top: 33px;
+    width: 940px;
+    height: 447px;
+    
+    /* Visual */
+    background-color: #dfdbd4;
+    box-shadow: 0 0 16px 0 rgba(35, 31, 32, .5);
+}
+
+.about-big-real-map {
+    /* Positioning */
+    position: absolute;
+    
+    /* Visual */
+    background-color: #dfdbd4;
 }
 
 .about-company {
@@ -1529,7 +1612,7 @@ a { cursor: pointer;}
     margin-bottom: 24px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -1580,8 +1663,11 @@ a { cursor: pointer;}
 
 .about-contacts-mini-map {
     /* Box-model */
-    padding-top: 7px;
+    margin-top: 7px;
     margin-bottom: 37px;
+    
+    /* Visual */
+    background-color: #dfdbd4;
 }
 
 .about-contacts .btn { width: 240px; }
@@ -1839,7 +1925,7 @@ a { cursor: pointer;}
     
     /* Typography */
     font-size: 13px;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     line-height: 16px;
     text-transform: uppercase;
 }
@@ -1905,7 +1991,7 @@ a { cursor: pointer;}
     margin-bottom: 18px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     
@@ -1925,7 +2011,7 @@ a { cursor: pointer;}
     margin-bottom: 20px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
@@ -2008,7 +2094,7 @@ a { cursor: pointer;}
     width: 95px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
     text-align: center;
@@ -2035,7 +2121,7 @@ a { cursor: pointer;}
     margin-bottom: 1px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     
@@ -2107,7 +2193,7 @@ input[type="radio"]:checked + .radio-label::before {
     
     /* Typography */
     color: #000;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 14px;
     text-transform: uppercase;
@@ -2132,7 +2218,7 @@ input[type="radio"]:checked + .radio-label::before {
     margin-bottom: 20px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 23px;
     text-transform: uppercase;
@@ -2247,7 +2333,7 @@ input[type="radio"]:checked + .radio-label::before {
     margin-right: 10px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-align: center;
@@ -2315,7 +2401,7 @@ input[type="radio"]:checked + .radio-label::before {
     
     /* Typography */
     font-size: 30px;
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     line-height: 1;
     color: #000;
@@ -2324,16 +2410,12 @@ input[type="radio"]:checked + .radio-label::before {
 
 .shop-about p {
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
 
 /* INVISIBLE AND NOT DONE YET ELEMENTS OF THE PAGE */
-.about-big-map {
-    /* Box-model */
-    display: none;
-}
 
 .popup-overlay {
     /* Positioning */
@@ -2360,6 +2442,9 @@ input[type="radio"]:checked + .radio-label::before {
 }
 
 .popup-window {
+    /* Positioning */
+    position: relative;
+    
     /* Box-model */
     border-top: 7px solid #ee3643;
     margin: auto;
@@ -2369,6 +2454,22 @@ input[type="radio"]:checked + .radio-label::before {
     /* Visual */
     background-color: #fff;
     box-shadow: 0 10px 40px 0 #293449;
+}
+
+.popup-close-icon {
+    /* Positioning */
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    
+    /* Box-model */
+    height: 21px;
+    width: 21px;
+    
+    /* Visual */
+    background-image: url("../img/close-popup.png");
+    cursor: pointer;
+    z-index: 999;
 }
 
 .popup-window .popup-text {
@@ -2467,7 +2568,7 @@ input[type="radio"]:checked + .radio-label::before {
     width: 188px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     
     /* Visual */
@@ -2484,7 +2585,7 @@ input[type="radio"]:checked + .radio-label::before {
     max-width: 428px;
     
     /* Typography */
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
 }
 
