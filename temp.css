@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "symbols-technomart";
+    src: url("../fonts/symbols-technomart.eot?22619757");
+    src: url("../fonts/symbols-technomart.eot?22619757#iefix") format("embedded-opentype"),
+        url("../fonts/symbols-technomart.woff?22619757") format("woff"),
+        url("../fonts/symbols-technomart.ttf?22619757") format("truetype"),
+        url("../fonts/symbols-technomart.svg?22619757#symbols-technomart") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "symbols-technomart";
+    src: url("../font/symbols-technomart.svg?22619757#symbols-technomart") format("svg");
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-technomart";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-left:before { content: "\3c"; } /* "&lt;" */
+.icon-right:before { content: "\3e"; } /* "&gt;" */
+.icon-basket:before { content: "\62"; } /* "b" */
+.icon-facebook:before { content: "\66"; } /* "f" */
+.icon-twitter:before { content: "\74"; } /* "t" */
+.icon-vk:before { content: "\76"; } /* "v" */
+.icon-up:before { content: "\2c4"; } /* "˄" */
+.icon-down:before { content: "\2c5"; } /* "˅" */
+.icon-left-big:before { content: "\2190"; } /* "←" */
+.icon-right-big:before { content: "\2192"; } /* "→" */
+.icon-login:before { content: "\2386"; } /* "⎆" */
+.icon-logout:before { content: "\241b"; } /* "␛" */
+.icon-up-dir:before { content: "\25b2"; } /* "▲" */
+.icon-down-dir:before { content: "\25bc"; } /* "▼" */
+.icon-circle:before { content: "\25cb"; } /* "○" */
+.icon-circle-dot:before { content: "\25cf"; } /* "●" */
+.icon-star:before { content: "\2605"; } /* "★" */
+.icon-check-off:before { content: "\2610"; } /* "☐" */
+.icon-check-on:before { content: "\2611"; } /* "☑" */
+.icon-youtube:before { content: "\f39e"; } /* "" */
+.icon-home:before { content: "🏠"; } /* "\1f3e0" */
+.icon-user:before { content: "👨"; } /* "\1f468" */
+.icon-phone:before { content: "📞"; } /* "\1f4de" */
+.icon-instagramm:before { content: "📷"; } /* "\1f4f7" */
+.icon-search:before { content: "🔍"; } /* "\1f50d" */
+.icon-bookmark:before { content: "🔖"; } /* "\1f516" */
+
+/* FONTS */
+
+/* cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cuprum"), local("Cuprum-Regular"), url(http://fonts.gstatic.com/s/cuprum/v7/gJovVCIsuVHpE7lUT-5TYfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cuprum"), local("Cuprum-Regular"), url(http://fonts.gstatic.com/s/cuprum/v7/TMj3tAAbnWTxQie9wLnZ2fesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cuprum"), local("Cuprum-Regular"), url(http://fonts.gstatic.com/s/cuprum/v7/rZj40-VH1f1Wt0yg6Fkbcw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Cuprum Bold"), local("Cuprum-Bold"), url(http://fonts.gstatic.com/s/cuprum/v7/n3IzcUkIerri6e9sz7DgbhJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Cuprum Bold"), local("Cuprum-Bold"), url(http://fonts.gstatic.com/s/cuprum/v7/uzbsbn5ow8tu8vOkX1aocxJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Cuprum Bold"), local("Cuprum-Bold"), url(http://fonts.gstatic.com/s/cuprum/v7/SfDyn5tWOk7I1we45jpLK1tXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Cuprum Italic"), local("Cuprum-Italic"), url(http://fonts.gstatic.com/s/cuprum/v7/eMlDd9JwnvIQuJvJDnS1ZxTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Cuprum Italic"), local("Cuprum-Italic"), url(http://fonts.gstatic.com/s/cuprum/v7/QxmSAs5cjsTOpL41JRoefRTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Cuprum Italic"), local("Cuprum-Italic"), url(http://fonts.gstatic.com/s/cuprum/v7/7Tr22pFIqlbT5cnmIKi5P_esZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans-Regular"), url(http://fonts.gstatic.com/s/ptsans/v8/JX7MlXqjSJNjQvI4heMMGvY6323mHUZFJMgTvxaG2iE.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans-Regular"), url(http://fonts.gstatic.com/s/ptsans/v8/vtwNVMP8y9C17vLvIBNZI_Y6323mHUZFJMgTvxaG2iE.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans-Regular"), url(http://fonts.gstatic.com/s/ptsans/v8/9kaD4V2pNPMMeUVBHayd7vY6323mHUZFJMgTvxaG2iE.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans-Regular"), url(http://fonts.gstatic.com/s/ptsans/v8/ATKpv8nLYAKUYexo8iqqrg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"), url(http://fonts.gstatic.com/s/ptsans/v8/kTYfCWJhlldPf5LnG4ZnHCEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"), url(http://fonts.gstatic.com/s/ptsans/v8/g46X4VH_KHOWAAa-HpnGPiEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"), url(http://fonts.gstatic.com/s/ptsans/v8/hpORcvLZtemlH8gI-1S-7iEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"), url(http://fonts.gstatic.com/s/ptsans/v8/0XxGQsSc1g4rdRdjJKZrNPk_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
